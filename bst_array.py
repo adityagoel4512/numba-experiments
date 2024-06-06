@@ -4,7 +4,7 @@ import numba as nb
 from numba import njit
 
 spec = [
-    ("data", nb.float32[:]),
+    ("data", nb.float32[::1]),
 ]
 
 @jitclass(spec)

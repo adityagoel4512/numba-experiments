@@ -18,7 +18,7 @@ class Node:
         self.left = None
         self.right = None
 
-def from_list(sorted_elems: np.ndarray) -> "Node":
+def from_sorted(sorted_elems: np.ndarray) -> Node:
     def build_tree(i: int, j: int) -> Node | None:
         if i >= j:
             return None
@@ -62,7 +62,7 @@ nodeT.define(Node.class_type.instance_type)
 
 
 if __name__ == "__main__":
-    tree = from_list(np.array([1, 2, 3, 4, 5]))
+    tree = from_sorted(np.array([1, 2, 3, 4, 5]))
     print("INORDER")
     inorder(tree)
     print("PREORDER")
